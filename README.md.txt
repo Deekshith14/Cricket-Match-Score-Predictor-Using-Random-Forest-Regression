@@ -2,9 +2,8 @@
 
 ## First inning ball to ball coverage of:
 
-* 1188 ODI matches -> data/odi.csv
-* 1474 T-20 matches -> data/t20.csv
-* 617 IPL matches -> data/ipl.csv
+* 1188 ODI matches -> D:\VAC\odi.csv
+* 617 IPL matches -> D:\VAC\ipl.csv
 
 ## Each dataset consists of the following columns:
 
@@ -40,29 +39,10 @@
 
 1. Linear Regression
    * ODI matches  -> [52,43]
-   * T-20 matches -> [52,44]
    * IPL matches  -> [50,44]
 2. Random Forest Regression
    * ODI matches  -> [79,77]
-   * T-20 matches -> [64,59]
    * IPL matches  -> [67,65]
 
-**Note:**
-Custom Accuracy is defined on the basis of difference between the predicted score and actual score. If this difference falls below a particular thresold, we count it as a correct prediction.
 
-* T-20 thresold: 10
 * ODI thresold: 20
-
-# Testing the code
-
-```
-git clone https://github.com/codophobia/CricketScorePredictor.git
-cd CricketScorePredictor
-virtualenv -p python3 venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-python3 linear_regression.py or random_forest_regressor.py
-```
-
-**Note:**
-I have hardcoded the ODI dataset in the code. You can change it to other datasets and test it. You can also play with other features which are included in the dataset. You can also play along with the Custom accuracy thresolds.
